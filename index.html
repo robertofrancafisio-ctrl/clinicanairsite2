@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clínica Nair França | Emagrecimento Natural</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<style>
+
+#sobre p {
+    max-width: 800px;
+    margin: 20px auto; /* aumenta espaço entre parágrafos */
+    text-align: justify; /* melhora a leitura */
+    line-height: 2; /* aumenta espaço entre linhas */
+    font-size: 19px; /* deixa o texto mais confortável */
+    background: rgba(255, 255, 255, 0.9); /* leve fundo para legibilidade */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* sombra suave */
+}
+  body {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    background-color: #fff;
+    color: #333;
+    scroll-behavior: smooth;
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #b30000, #e60000);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    z-index: 1000;
+    overflow-x: auto;
+  }
+
+  header h1 {
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    white-space: nowrap;
+    margin-right: 20px;
+  }
+
+  nav {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    white-space: nowrap;
+  }
+
+  nav a:hover {
+    background-color: white;
+    color: #b30000;
+    transform: translateY(-2px);
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 20px;
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+
+  section h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #b30000;
+    text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 10px 15px;
+    border-radius: 8px;
+    display: inline-block;
+  }
+
+  section p {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    line-height: 1.8;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  section img {
+    display: block;
+    margin: 20px auto;
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+  }
+
+  footer {
+    background-color: #b30000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .spacer {
+    height: 80px;
+  }
+
+  .galeria-resultados {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .galeria-resultados img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .galeria-resultados img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  }
+
+  .whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+  }
+
+  .whatsapp-float img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+
+  .instagram-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 90px;
+    right: 20px;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+  }
+
+  .instagram-float img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+
+  #contato {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  #contato p {
+    margin: 10px 0;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Clínica Nair França | Emagrecimento Natural</h1>
+  <nav>
+    <a href="#sobre">Sobre mim</a>
+    <a href="#resultados">Resultados</a>
+    <a href="#tecnica">Técnica</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
+
+<div class="spacer"></div>
+
+<section id="apresentacao" style="background-color: #fff; padding: 50px 20px; text-align: center;">
+<img src="pica.png" alt="Apresentação" style="max-width: 90%; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+</section>
+
+<section id="sobre" style="background-image: url('sobre.jpg');">
+  <h2>Sobre mim</h2>
+  <p>Na Clínica Nair França, transformar vidas é nossa missão. Com mais de 35 anos de experiência, oferecemos um caminho único para o emagrecimento natural, saudável e duradouro — sem atalhos, mas com resultados reais. Nossa filosofia une técnica avançada, cuidado atento e atenção personalizada, criando um método exclusivo e seguro que promove redução de medidas e bem-estar a cada sessão semanal.</p>
+  <p>Reconhecida pela excelência, Nair França já foi destaque em entrevistas com o renomado Colunista João Aberto, participou de reportagens na Rede Globo Nordeste e em emissoras de rádio, compartilhando sua visão transformadora. Seu trabalho pioneiro conquistou o Prêmio Qualidade Brasil, entregue no ATL Hall, no Rio de Janeiro, pela técnica inovadora de redução de tecidos flácidos.</p>
+  <p>Aqui, não é apenas sobre emagrecer — é sobre mudar sua relação com seu corpo, resgatar sua confiança e conquistar uma nova qualidade de vida. Descubra como é possível transformar seu corpo e sua história com segurança, cuidado e resultados comprovados.</p>
+</section>
+
+<section id="resultados" style="background-color: #fff0f0;">
+  <h2>Resultados</h2>
+  <div class="galeria-resultados">
+    <img src="resultado1.png" alt="Resultado 1">
+    <img src="resultado2.png" alt="Resultado 2">
+    <img src="resultado3.png" alt="Resultado 3">
+    <img src="resultado4.png" alt="Resultado 4">
+    <img src="resultado5.png" alt="Resultado 5">
+    <img src="resultado6.png" alt="Resultado 6">
+  </div>
+</section>
+
+<section id="tecnica" style="background-image: url('tecnica.jpg');">
+  <h2>Técnica</h2>
+  <p>Nossa técnica exclusiva é baseada em métodos naturais, respeitando o corpo e estimulando mudanças profundas e duradouras. Trabalhamos com atendimento individualizado para cada cliente.</p>
+</section>
+
+<section id="contato" style="background-image: url('contato.jpg');">
+  <h2>Contato</h2>
+  <p>Entre em contato conosco para agendar sua avaliação e iniciar seu processo de transformação. 
+<p>A avaliação é gratuita, mas é necessário marcar o dia por meio do Whatsapp ou Instagram.</p>
+  <p>Instagram: @clinicanairfranca</p>
+  <p>Whatsapp: (81) 99662-8745</p>
+</section>
+
+<footer>
+  © 2025 Clínica Nair França - Todos os direitos reservados.
+</footer>
+
+<a href="https://wa.me/5581996628745" target="_blank" class="whatsapp-float">
+  <img src="whatsapp-logo.png" alt="WhatsApp">
+</a>
+
+<a href="https://instagram.com/clinicanairfranca" target="_blank" class="instagram-float">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+</a>
+
+</body>
+</html>
