@@ -6,27 +6,25 @@
 <title>Clínica Nair França | Emagrecimento Natural</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 <style>
-
 #sobre p {
     max-width: 800px;
-    margin: 20px auto; /* aumenta espaço entre parágrafos */
-    text-align: justify; /* melhora a leitura */
-    line-height: 2; /* aumenta espaço entre linhas */
-    font-size: 19px; /* deixa o texto mais confortável */
-    background: rgba(255, 255, 255, 0.9); /* leve fundo para legibilidade */
+    margin: 20px auto;
+    text-align: justify;
+    line-height: 2;
+    font-size: 19px;
+    background: rgba(255, 255, 255, 0.9);
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* sombra suave */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
-  body {
+body {
     margin: 0;
     font-family: 'Playfair Display', serif;
     background-color: #fff;
     color: #333;
     scroll-behavior: smooth;
-  }
-
-  header {
+}
+header {
     position: fixed;
     top: 0;
     width: 100%;
@@ -38,24 +36,21 @@
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
     z-index: 1000;
     overflow-x: auto;
-  }
-
-  header h1 {
+}
+header h1 {
     color: white;
     font-size: 18px;
     font-weight: 700;
     white-space: nowrap;
     margin-right: 20px;
-  }
-
-  nav {
+}
+nav {
     display: flex;
     gap: 12px;
     align-items: center;
     flex-wrap: nowrap;
-  }
-
-  nav a {
+}
+nav a {
     color: white;
     text-decoration: none;
     font-size: 16px;
@@ -63,15 +58,13 @@
     border-radius: 6px;
     transition: background-color 0.3s, color 0.3s, transform 0.2s;
     white-space: nowrap;
-  }
-
-  nav a:hover {
+}
+nav a:hover {
     background-color: white;
     color: #b30000;
     transform: translateY(-2px);
-  }
-
-  section {
+}
+section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -83,9 +76,8 @@
     background-size: cover;
     background-position: center;
     position: relative;
-  }
-
-  section h2 {
+}
+section h2 {
     text-align: center;
     font-size: 30px;
     margin-bottom: 20px;
@@ -95,9 +87,8 @@
     padding: 10px 15px;
     border-radius: 8px;
     display: inline-block;
-  }
-
-  section p {
+}
+section p {
     max-width: 800px;
     margin: auto;
     text-align: center;
@@ -106,9 +97,8 @@
     background: rgba(255, 255, 255, 0.85);
     padding: 15px;
     border-radius: 8px;
-  }
-
-  section img {
+}
+section img {
     display: block;
     margin: 20px auto;
     max-width: 90%;
@@ -116,43 +106,37 @@
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     transition: transform 0.3s ease;
-  }
-
-  footer {
+}
+footer {
     background-color: #b30000;
     color: white;
     padding: 20px;
     text-align: center;
     font-size: 14px;
-  }
-
-  .spacer {
+}
+.spacer {
     height: 80px;
-  }
-
-  .galeria-resultados {
+}
+.galeria-resultados {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     max-width: 1200px;
     margin: auto;
-  }
-
-  .galeria-resultados img {
+}
+.galeria-resultados img {
     width: 300px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .galeria-resultados img:hover {
+}
+.galeria-resultados img:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-  }
-
-  .whatsapp-float {
+}
+.whatsapp-float {
     position: fixed;
     width: 60px;
     height: 60px;
@@ -164,16 +148,14 @@
     align-items: center;
     cursor: pointer;
     animation: pulse 2s infinite;
-  }
-
-  .whatsapp-float img {
+}
+.whatsapp-float img {
     width: 100%;
     height: 100%;
     border-radius: 50%;
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  }
-
-  .instagram-float {
+}
+.instagram-float {
     position: fixed;
     width: 60px;
     height: 60px;
@@ -185,29 +167,65 @@
     align-items: center;
     cursor: pointer;
     animation: pulse 2s infinite;
-  }
-
-  .instagram-float img {
+}
+.instagram-float img {
     width: 100%;
     height: 100%;
     border-radius: 50%;
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  }
-
-  @keyframes pulse {
+}
+@keyframes pulse {
     0% { transform: scale(1); }
     50% { transform: scale(1.1); }
     100% { transform: scale(1); }
-  }
-
-  #contato {
+}
+#contato {
     padding-top: 40px;
     padding-bottom: 40px;
-  }
-
-  #contato p {
+}
+#contato p {
     margin: 10px 0;
-  }
+}
+
+/* SLIDESHOW */
+.mySlides {
+    display: none;
+    position: relative;
+}
+.mySlides img {
+    border-radius: 10px;
+    height: 100vh;
+    object-fit: cover;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* Pontinhos dentro da imagem */
+.dots-container {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+}
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 4px;
+    background-color: rgba(255,255,255,0.6);
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+.active-dot {
+    background-color: rgba(0,0,0,0.7);
+}
 </style>
 </head>
 <body>
@@ -215,6 +233,7 @@
 <header>
   <h1>Clínica Nair França | Emagrecimento Natural</h1>
   <nav>
+    <a href="#home">HOME</a>
     <a href="#sobre">SOBRE MIM</a>
     <a href="#resultados">RESULTADOS</a>
     <a href="#tecnica">TÉCNICA</a>
@@ -225,9 +244,54 @@
 
 <div class="spacer"></div>
 
-<section id="apresentacao" style="background-color: #fff; padding: 50px 20px; text-align: center;">
-<img src="pica.png" alt="Apresentação" style="max-width: 90%; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+<!-- CARROSSEL -->
+<section id="home" style="position: relative; max-width: 100%; overflow: hidden;">
+  <div class="slideshow-container" style="position: relative;">
+
+    <!-- Slides -->
+    <div class="mySlides fade">
+      <img src="slide1.png" style="width:100%">
+    </div>
+    <div class="mySlides fade">
+      <img src="slide2.png" style="width:100%">
+    </div>
+    <div class="mySlides fade">
+      <img src="slide3.png" style="width:100%">
+    </div>
+
+    <!-- Pontinhos -->
+    <div class="dots-container">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+  </div>
 </section>
+
+<script>
+let slideIndex = 0;
+showSlides();
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  slides[slideIndex-1].style.display = "block";  
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active-dot", "");
+  }
+  dots[slideIndex-1].className += " active-dot";
+  setTimeout(showSlides, 4000);
+}
+function currentSlide(n) {
+  slideIndex = n - 1;
+  showSlides();
+}
+</script>
 
 <section id="sobre" style="background-image: url('sobre.jpg');">
   <h2>SOBRE MIM</h2>
@@ -248,15 +312,15 @@
   </div>
 </section>
 
-<section id="tecnica" style="background-image: url('tecnica.png');">
+<section id="tecnica" style="background-image: url('tecnica2.jpg');">
   <h2>TÉCNICA</h2>
   <p>Nossa técnica exclusiva é baseada em métodos naturais, respeitando o corpo e estimulando mudanças profundas e duradouras. Trabalhamos com atendimento individualizado para cada cliente.</p>
 </section>
 
 <section id="contato" style="background-image: url('contato.jpg');">
   <h2>CONTATO</h2>
-  <p>Entre em contato conosco para agendar sua avaliação e iniciar seu processo de transformação. É importante lembrar que os resultados mostrados aqui foram permitidos para divulgação em redes sociais e sites da clínica. Há muitos outros resultados que só podem ser mostrados presencialmente na clínica durante a avaliação ou tratamento. Ou seja, se você quer saber de outros resultados milagrosos, apenas conseguirá marcando uma avaliação. 
-<p>A avaliação é gratuita, mas é necessário marcar o dia por meio do Whatsapp ou Instagram.</p>
+  <p>Entre em contato conosco para agendar sua avaliação e iniciar seu processo de transformação. É importante lembrar que os resultados mostrados aqui foram permitidos para divulgação em redes sociais e sites da clínica. Há muitos outros resultados que só podem ser mostrados presencialmente na clínica durante a avaliação ou tratamento. Ou seja, se você quer saber de outros resultados milagrosos, apenas conseguirá marcando uma avaliação.</p>
+  <p>A avaliação é gratuita, mas é necessário marcar o dia por meio do Whatsapp ou Instagram.</p>
   <p>Instagram: @clinicanairfranca</p>
   <p>Whatsapp: (81) 99662-8745</p>
 </section>
@@ -272,26 +336,6 @@
 <a href="https://instagram.com/clinicanairfranca" target="_blank" class="instagram-float">
   <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
 </a>
-
-<section style="text-align:center; margin:40px 0;">
-  <h2 style="font-family:Arial, sans-serif; color:#333;">Confira nosso Blog</h2>
-  <p style="font-family:Arial, sans-serif; color:#555; font-size:16px;">
-    Novidades, dicas de emagrecimento natural e muito mais. Clique abaixo para acessar!
-  </p>
-  <a href="/blog/" style="
-    display:inline-block;
-    padding:12px 25px;
-    background:#009688;
-    color:white;
-    font-family:Arial, sans-serif;
-    font-size:16px;
-    text-decoration:none;
-    border-radius:5px;
-    transition:background 0.3s;
-  " onmouseover="this.style.background='#00796B';" onmouseout="this.style.background='#009688';">
-    Ir para o Blog
-  </a>
-</section>
 
 </body>
 </html>
