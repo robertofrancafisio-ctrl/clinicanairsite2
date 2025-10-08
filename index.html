@@ -42,17 +42,24 @@ header {
     margin: 0 auto;
     padding: 10px 20px;
 }
-header h1 {
-    color: white;
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-size: 18px;
     font-weight: 700;
-    text-align: center;
-    white-space: nowrap;
-    animation: brilho 5s ease-in-out infinite;
     background: linear-gradient(90deg, #fff, #ffcccc, #fff);
-    background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+    animation: brilho 5s ease-in-out infinite;
+    white-space: nowrap;
+}
+.logo img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    filter: drop-shadow(0 0 4px rgba(0,0,0,0.4));
 }
 @keyframes brilho {
     0% { background-position: -200px; }
@@ -151,11 +158,43 @@ footer {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0,0,0,0.3);
 }
-.whatsapp-float {
+
+/* === DEPOIMENTOS === */
+#depoimentos {
+    background: #fff;
+    padding: 100px 20px;
+}
+.depoimentos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+}
+.depoimento {
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #b30000;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 320px;
+    font-size: 17px;
+    line-height: 1.8;
+    text-align: justify;
+}
+.assinatura {
+    margin-top: 15px;
+    text-align: right;
+    font-weight: bold;
+    color: #b30000;
+}
+/* === FIM DEPOIMENTOS === */
+
+/* === FLOAT BUTTONS === */
+.whatsapp-float, .instagram-float {
     position: fixed;
     width: 60px;
     height: 60px;
-    bottom: 20px;
     right: 20px;
     z-index: 10000;
     display: flex;
@@ -164,26 +203,9 @@ footer {
     cursor: pointer;
     animation: pulse 2s infinite;
 }
-.whatsapp-float img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-}
-.instagram-float {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 90px;
-    right: 20px;
-    z-index: 10000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    animation: pulse 2s infinite;
-}
-.instagram-float img {
+.whatsapp-float { bottom: 20px; }
+.instagram-float { bottom: 90px; }
+.whatsapp-float img, .instagram-float img {
     width: 100%;
     height: 100%;
     border-radius: 50%;
@@ -194,51 +216,7 @@ footer {
     50% { transform: scale(1.1); }
     100% { transform: scale(1); }
 }
-#contato {
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
-#contato p {
-    margin: 10px 0;
-}
-
-/* SLIDESHOW */
-.mySlides {
-    display: none;
-    position: relative;
-}
-.mySlides img {
-    border-radius: 10px;
-    height: 100vh;
-    object-fit: cover;
-}
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-@keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-}
-.dots-container {
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
-    text-align: center;
-    z-index: 10;
-}
-.dot {
-    height: 12px;
-    width: 12px;
-    margin: 0 4px;
-    background-color: rgba(255,255,255,0.6);
-    border-radius: 50%;
-    display: inline-block;
-    cursor: pointer;
-}
-.active-dot {
-    background-color: rgba(0,0,0,0.7);
-}
+/* === FIM FLOAT BUTTONS === */
 </style>
 </head>
 <body>
@@ -251,7 +229,10 @@ footer {
       <a href="#resultados">Resultados</a>
     </nav>
 
-    <h1>CLÍNICA NAIR FRANÇA | EMAGRECIMENTO NATURAL</h1>
+    <h1 class="logo">
+      <img src="logo-simbolo.png" alt="Símbolo da Clínica Nair França">
+      CLÍNICA NAIR FRANÇA | EMAGRECIMENTO NATURAL
+    </h1>
 
     <nav class="nav-right">
       <a href="#tecnica">Técnica</a>
@@ -262,6 +243,8 @@ footer {
 </header>
 
 <div class="spacer"></div>
+
+<!-- RESTO DO CÓDIGO (seções, slides, etc.) -->
 
 <!-- CARROSSEL -->
 <section id="home" style="position: relative; max-width: 100%; overflow: hidden;">
@@ -336,6 +319,24 @@ function currentSlide(n) {
 <p>Ao diminuir a tensão e melhorar a percepção corporal, o tratamento contribui para mudanças comportamentais que potencializam os resultados de emagrecimento de forma mais sustentável. Na nossa clínica, essa abordagem integrada é aplicada de forma personalizada, visando resultados eficazes em emagrecimento e redução de medidas, aliando ciência, toque terapêutico e técnicas tradicionais orientais.</p>
 </section>
 
+<section id="depoimentos">
+  <h2>O que minhas pacientes dizem</h2>
+  <div class="depoimentos-container">
+    <div class="depoimento">
+      <p>"A experiência foi incrível! Fui recebida com tanto carinho e atenção que me senti em casa. O tratamento realmente funciona e o ambiente é muito acolhedor!"</p>
+      <div class="assinatura">— R.O.</div>
+    </div>
+    <div class="depoimento">
+      <p>"Desde a primeira sessão, percebi que a Clínica Nair França é diferente. A técnica é eficaz, mas o toque humano faz toda a diferença. Resultado visível e bem-estar!"</p>
+      <div class="assinatura">— D.G.</div>
+    </div>
+    <div class="depoimento">
+      <p>"Hoje em dia é raro encontrar profissionais tão humanas. A Nair é incrível, explica tudo com calma e me deixou muito confiante no processo!"</p>
+      <div class="assinatura">— B.R.</div>
+    </div>
+  </div>
+</section>
+
 <section id="contato" style="background-image: url('contato.jpg');">
   <h2>CONTATO</h2>
   <p>Entre em contato conosco para agendar sua avaliação e iniciar seu processo de transformação. Importante lembrar que os resultados mostrados aqui foram permitidos para divulgação em redes sociais e sites da clínica. 
@@ -359,4 +360,3 @@ function currentSlide(n) {
 
 </body>
 </html>
-
